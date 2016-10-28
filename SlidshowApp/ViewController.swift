@@ -77,8 +77,8 @@ class ViewController: UIViewController {
             sender.setTitle("start", for: UIControlState.normal)
             
             //ボタン無効化
-            backBtn.enabled = false
-            nextBtn.enabled = false
+            backBtn.isEnabled = true
+            nextBtn.isEnabled = true
     
         }
         else{
@@ -88,8 +88,8 @@ class ViewController: UIViewController {
             sender.setTitle("stop", for: UIControlState.normal)
             
             //ボタンを有効化
-            backBtn.isEnabled = true
-            nextBtn.isEnabled = true
+            backBtn.isEnabled = false
+            nextBtn.isEnabled = false
         }
     }
     
