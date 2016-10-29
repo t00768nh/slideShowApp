@@ -84,6 +84,7 @@ class ViewController: UIViewController {
         else{
             //タイマーを作成
             timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.onUpdate(_:)), userInfo: nil, repeats: true)
+            
             //ラベル変更
             sender.setTitle("stop", for: UIControlState.normal)
             
@@ -113,6 +114,8 @@ class ViewController: UIViewController {
         
         
         resultViewController.imageWide =  photos[0]
+        timer?.invalidate()
+        
         
   
     }
@@ -120,6 +123,9 @@ class ViewController: UIViewController {
     
     
     @IBAction func unwind(seque: UIStoryboardSegue){
+         timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.onUpdate(_:)), userInfo: nil, repeats: true)
+        
+        
     }
 
     
